@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Enhancer. @berlandbor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>AI Image Enhancer</h1>
+    
+   <p>Дорогой Друг! Этот проект еще в разработке. Пока работает в тестовом режиме.</p>
+    <div class="container">
+        <label for="upload">📤 Выбрать изображение</label>
+        <input type="file" id="upload" accept="image/*">
+
+        <div class="hint" id="hint">
+            👉 Сначала **улучшите качество**, затем **увеличьте** (×2 или ×4), 
+            затем **повышение резкости** и **скачивание**.
+        </div>
+
+        <br><br>
+        <button class="btn" id="enhance" onclick="runNeuralNetwork()" disabled>🧠 Улучшить качество</button>
+        <button class="btn" id="resize2x" onclick="resizeImage(2)" disabled>🔍 Увеличить ×2</button>
+        <button class="btn" id="resize4x" onclick="resizeImage(4)" disabled>🔍 Увеличить ×4</button>
+        <button class="btn" id="sharpen" onclick="sharpenImage()" disabled>✨ Повысить резкость</button>
+        <button class="btn" id="download" onclick="downloadImage()" disabled>📥 Скачать</button>
+
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
